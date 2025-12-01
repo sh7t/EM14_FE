@@ -5,99 +5,113 @@ const prompt = promptSync();
 // 1.
 
 /*
-function checkEmptyString(str: string): boolean {
-    return str.trim().length === 0;
+function checkEmptyString(str: string): void {
+    if (str.length === 0) {
+        throw new Error("Empty text inputted.");
+    }
 }
 
 // ----------------------------------------
 
-let name: string = prompt("Your name: ");
-if (checkEmptyString(name)) {
-    console.log("Ain't entered your name");
-    process.exit();
-}
+try {
+    let name: string = prompt("Your name: ").trim().toLowerCase();
+    checkEmptyString(name)
 
-let lastName: string = prompt("Your family name: ");
-if (checkEmptyString(lastName)) {
-    console.log("Ain't entered your family name");
-    process.exit();
-}
+    name = name[0].toUpperCase() + name.substring(1); // Не робив цього для прізвища тому, що є шотландсько-ірландські, які починаються на Мак...
 
-const user = {
-    fullName: name + " " + lastName,
+    let lastName: string = prompt("Your family name: ").trim();
+    checkEmptyString(lastName)
+
+    const user = {
+        name: name,
+        lastName: lastName,
+        fullName: name + " " + lastName
+    }
+    console.log("\nName - " + user.name);
+    console.log("Family name - " + user.lastName);
+    console.log("Name and Family name - " + user.fullName);
+} catch (Error) {
+    console.error("Error occurred: " + Error.message);
 }
-console.log(user.fullName);
 */
+
 
 // 2.
 
 /*
-function compareConstWithInput(constant: string, userInput: string): boolean {
-    return userInput === constant;
+function compareConstantWithInput(constant: string, userInput: string): void {
+    if (userInput !== constant) {
+        throw new Error("Access denied.");
+    }
 }
 
 // ----------------------------------------
 
-let login = prompt("Login: ");
+try {
+    let login: string = prompt("Login: ");
+    let password: string = prompt("Password: ");
 
-let password = prompt("Password: ");
+    compareConstantWithInput("admin", login);
+    compareConstantWithInput("12345", password);
 
-if (compareConstWithInput("admin", login) && compareConstWithInput("12345", password)) {
     console.log("Successfully logged in");
-} else {
-    console.log("Access denied");
+} catch (Error) {
+    console.error("Error occurred: " + Error.message);
 }
 */
-
 
 // 3.
 
 /*
-function checkStringSuitability(str: string): boolean {
-    return str.trim().length > 5;
+function checkStringSuitability(str: string): void {
+    if (str.length <= 5) {
+        throw new Error("Inappropriate text for product information");
+    }
 }
-
-function checkPriceSuitability(num: number): boolean {
-    return num > 0;
+function checkPriceSuitability(num: number): void {
+    if (num <= 0) {
+        throw new Error("Inappropriate value for product price");
+    }
 }
 
 // ----------------------------------------
 
-let productName: string = prompt("Product name: ");
-if (!checkStringSuitability(productName)) {
-    console.log("Ain't appropriate product name");
-    process.exit();
-}
+try {
+    let productName: string = prompt("Product name: ").trim();
+    checkStringSuitability(productName)
 
-let productDescription: string = prompt("Product description: ");
-if (!checkStringSuitability(productDescription)) {
-    console.log("Ain't appropriate product description");
-    process.exit();
-}
+    let productDescription: string = prompt("Product description: ").trim();
+    checkStringSuitability(productDescription)
 
-let productPrice: number = Number(prompt("Product price: "));
-if (!checkPriceSuitability(productPrice)) {
-    console.log("Ain't appropriate product price");
-    process.exit();
-}
+    let productPrice: number = Number(prompt("Product price: "));
+    checkPriceSuitability(productPrice)
 
-const product = {
-    name: productName,
-    description: productDescription,
-    price: productPrice,
+    const product = {
+        name: productName,
+        description: productDescription,
+        price: productPrice,
+        showProduct: function(): void {
+            console.log(`\n${this.name}: ${this.description}.\nPrice: ${this.price}`);
+        }
+    }
+    product.showProduct()
+} catch (Error) {
+    console.error("Error occurred: " + Error.message);
 }
-
-console.log(`${product.name}: ${product.description}.\nPrice: ${product.price}`);
 */
 
 // 4.
 
 /*
-function checkHeightSuitability(height: number): boolean {
-    return height > 60 && height < 280; // зріст найменшої і найвищої людей з похибкою
+function checkHeightSuitability(height: number): void {
+    if (height <= 60 && height >= 280) { // зріст найменшої і найвищої людей з похибкою
+        throw new Error("Inappropriate human height");
+    }
 }
-function checkWeightSuitability(weight: number): boolean {
-    return weight > 0 && weight < 730; // вага найлегшої і найващої людей з похибкою
+function checkWeightSuitability(weight: number): void {
+    if (weight <= 0 && weight >= 730) { // вага найлегшої і найващої людей з похибкою
+        throw new Error("Inappropriate human weight");
+    }
 }
 function analyseBodyMassIndexAppropriability(bmi: number): void {
     if (bmi >= 18.5 && bmi <= 24.9) {
@@ -109,97 +123,89 @@ function analyseBodyMassIndexAppropriability(bmi: number): void {
 
 // ----------------------------------------
 
-let height: number = Number(prompt("Your height in centimeters: "))
-if (!checkHeightSuitability(height)) {
-    console.log("Ain't appropriate height");
-    process.exit();
+try {
+    let height: number = Number(prompt("Your height in centimeters: "))
+    checkHeightSuitability(height)
+
+    let weight: number = Number(prompt("Your weight in kilograms: "))
+    checkWeightSuitability(weight)
+
+    analyseBodyMassIndexAppropriability(Math.round(weight / Math.pow((height/100), 2)))
+} catch (Error) {
+    console.error("Error occurred: " + Error.message);
 }
-
-let weight: number = Number(prompt("Your weight in kilograms: "))
-if (!checkHeightSuitability(height)) {
-    console.log("Ain't appropriate height");
-    process.exit();
-}
-
-let bmi: number = Math.round(weight / Math.pow((height/100), 2))
-
-analyseBodyMassIndexAppropriability(bmi)
 */
 
 // 5.
 
 /*
-
-interface User {
-    email: string;
-    password: string;
-    birthday: string;
+function checkEmailSuitability(email: string): void {
+    if (!(email.length > 8 && email.includes('@') && email.includes('.'))) {
+        throw new Error("Invalid email. Expected real email address.");
+    }
 }
-
-// ----------------------------------------
-
-function checkEmailSuitability(email: string): boolean {
-    return email.trim().length > 8 && email.includes('@') && email.includes('.');
-}
-function checkPasswordSuitability(password: string): boolean {
+function checkPasswordSuitability(password: string): void {
     let repeatedChars: number = 0;
     for (let char of password) {
         if (char === password[0]) {
             repeatedChars++;
         }
     }
-
-    return password.trim().length > 8 && password.trim().length < 16 && (password.trim().length != repeatedChars);
+    if (!(password.length > 8 && password.length < 16 && (password.length != repeatedChars))) {
+        throw new Error("Expected password has to be from 8 up to 16 characters and unrepeatable.");
+    }
 }
-function checkAgeSuitability(birthDate: string): boolean {
+function checkAgeSuitability(birthDate: string): void {
     let birthday: Date = new Date(
         Number(birthDate.slice(6)),
         Number(birthDate.slice(3, 5)),
         Number(birthDate.slice(0, 2)));
 
     let age: number = new Date().getFullYear() - birthday.getFullYear();
-    return age >= 18 && age < 100;
+
+    if (age < 18 && age >= 100) {
+        throw new Error("Inappropriate age.");
+    }
 }
 
 // ----------------------------------------
 
-let email: string = prompt("Your email: ");
-if (!checkEmailSuitability(email)) {
-    console.log("Ain't appropriate email");
-    process.exit();
+interface User {
+    email: string;
+    password: string;
+    birthday: string;
+    showUser: () => void
 }
 
-let password: string = prompt("Your password: ");
-if (!checkPasswordSuitability(password)) {
-    console.log("Ain't appropriate password");
-    process.exit();
-}
+// ----------------------------------------
 
-let birthday: string = prompt("Birthday(dd.mm.yyyy): ");
-if (!checkAgeSuitability(birthday)) {
-    console.log("Ain't adult");
-    process.exit();
-}
+try {
+    let email: string = prompt("Your email: ").trim();
+    checkEmailSuitability(email)
 
-let currentUser: User = {
-    email: email,
-    password: password,
-    birthday: birthday
-}
+    let password: string = prompt("Your password: ").trim();
+    checkPasswordSuitability(password)
 
-console.log(`\nRegistered user:\nEmail: ${currentUser.email}\nPassword: ${currentUser.password}\nBirthday: ${currentUser.birthday}`);
+    let birthday: string = prompt("Birthday(dd.mm.yyyy): ").trim();
+    checkAgeSuitability(birthday)
+
+    let currentUser: User = {
+        email: email,
+        password: password,
+        birthday: birthday,
+        showUser: function(): void {
+            console.log(`\nRegistered user:\nEmail: ${this.email}\nPassword: ${this.password}\nBirthday: ${this.birthday}`);
+        }
+    }
+    currentUser.showUser();
+} catch (Error) {
+    console.error("Error occurred: " + Error.message);
+}
 */
 
-// 7.
+// 6.
 
 /*
-interface Temperature {
-    temperatureValue: number;
-    unit: string;
-}
-
-// ----------------------------------------
-
 function convertTemperature(temperature: number, unit: string): Temperature {
     if (unit === "C") {
         return {
@@ -212,15 +218,16 @@ function convertTemperature(temperature: number, unit: string): Temperature {
             unit: "C"
         }
     } else {
-        console.log("Invalid temperature value or temperature unit of measurement.");
-        process.exit();
+        throw new Error("Invalid temperature unit \"" + unit + "\" of measurement.");
     }
 
 
 }
-
 function analyzeConvertTemperature(temperature: string): void {
     let temperatureValue: number = Number(temperature.slice(0, temperature.length-2));
+    if (isNaN(temperatureValue) || temperatureValue === 0) {
+        throw new Error("Invalid temperature value");
+    }
     let unit: string = temperature[temperature.length-1];
 
     let convertedTemperature: Temperature = convertTemperature(temperatureValue, unit);
@@ -230,8 +237,17 @@ function analyzeConvertTemperature(temperature: string): void {
 
 // ----------------------------------------
 
-let temperature: string = prompt("Temperature(e.g. 100 C, 32 F): ").trim()
+interface Temperature {
+    temperatureValue: number;
+    unit: string;
+}
 
-analyzeConvertTemperature(temperature);
+// ----------------------------------------
+
+try {
+    let temperature: string = prompt("Temperature(e.g. 100 C, 32 F): ").trim()
+    analyzeConvertTemperature(temperature);
+} catch (Error) {
+    console.error("Error occurred: " + Error.message);
+}
 */
-
