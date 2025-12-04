@@ -13,8 +13,8 @@ type Product = {
     discount: number,
     reviewCount: number;
 };
-
 const productList: Product[] = products;
+
 
 // 1.
 const names = productList.map( (product: Product) => {
@@ -144,7 +144,7 @@ productList.push({
 
 
 
-// -
+/*
 function Func(str: string): void {
     return;
 }
@@ -156,4 +156,4 @@ try {
 } catch (Error) {
     console.error("Error occurred: " + Error.message);
 }
-
+*/
