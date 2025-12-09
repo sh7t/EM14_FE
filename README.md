@@ -1,4 +1,4 @@
 # EM14 + numb + React
-```
-hello world
+``` js
+console.log("hello world");
 ```
