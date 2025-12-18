@@ -1,19 +1,21 @@
 import './App.css'
-import Newspaper from "./components/Newspaper/Newspaper.tsx"
+import TelegramMessage from "./components/TelegramMessage/TelegramMessage.tsx"
 import BlogMessage from "./components/BlogMessage/BlogMessage.tsx"
 import {blogs} from './fixtures/blogs.ts'
-import {screenshotedNews} from './fixtures/news.ts'
+import {messages} from './fixtures/messages.ts'
 
 function App() {
     return (
         <div>
-            {screenshotedNews.map((news, index) => (
-                <Newspaper key={index} {...news}/>
-            ))}
+            <div className="messagingSpace">
+                {messages.map((message, index) => (
+                    <TelegramMessage key={index} {...message} />
+                ))}
+            </div>
             <hr/>
-            {blogs.map((blog, index) => (
-                <BlogMessage key={index} {...blog}/>
-            ))}
+                {blogs.map((blog, index) => (
+                    <BlogMessage key={index} {...blog}/>
+                ))}
         </div>
     )
 }
