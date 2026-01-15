@@ -1,0 +1,79 @@
+.header {
+  margin-top: 96px;
+  text-align: center;
+}
+
+.header .our-blog {
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #f2ebff;
+  border-radius: 25px;
+  background-color: #f2ebff;
+  width: fit-content;
+}
+
+.header .our-blog h3 {
+  padding: 4px 12px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #6941c6;
+}
+
+.header h1 {
+  margin: 16px auto 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 48px;
+  color: #42307d;
+  width: fit-content;
+}
+
+.header a {
+  display: inline-block;
+  text-decoration: none;
+  color: #42307d;
+}
+
+.header p {
+  margin: 26px auto 0 auto;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  color: #6941c6;
+}
+
+.header a,
+a:hover {
+  text-decoration: none;
+}
+
+.header input[type="text"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 6px 12px 6px 36px;
+  height: 48px;
+  width: 320px;
+  margin: 40px auto 0 auto;
+
+  border: 2px solid #d0d5dd;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #667085;
+
+  background-color: white;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/622/622669.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 16px 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .header input[type="text"] {
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

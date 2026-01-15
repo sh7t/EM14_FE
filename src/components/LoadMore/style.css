@@ -1,0 +1,20 @@
+.load-more a,
+.load-more a:hover {
+  display: flex;
+  justify-content: space-between;
+  margin: 64px auto 96px auto;
+  padding: 12px 20px;
+  text-align: center;
+  border: 1px solid #f2ebff;
+  border-radius: 8px;
+  background-color: #f2ebff;
+  width: fit-content;
+  text-decoration: none;
+  gap: 8px;
+}
+
+.load-more a h3 {
+  font-weight: 500;
+  font-size: 16px;
+  color: #6941c6;
+}

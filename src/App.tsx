@@ -1,23 +1,27 @@
-import './App.css'
-import TelegramMessage from "./components/TelegramMessage/TelegramMessage.tsx"
-import BlogMessage from "./components/BlogMessage/BlogMessage.tsx"
-import {blogs} from './fixtures/blogs.ts'
-import {messages} from './fixtures/messages.ts'
+import "./App.css";
+import Header from "./components/Header";
+import Post from "./components/Post";
+import { posts } from "./fixtures/posts";
+import type { PostType } from "./types/postType.ts";
+import LoadMore from "./components/LoadMore";
 
 function App() {
-    return (
-        <div>
-            <div className="messagingSpace">
-                {messages.map((message, index) => (
-                    <TelegramMessage key={index} {...message} />
-                ))}
-            </div>
-            <hr/>
-                {blogs.map((blog, index) => (
-                    <BlogMessage key={index} {...blog}/>
-                ))}
+  return (
+    <div className="page">
+      <Header />
+
+      <main className="main">
+        <div className="container">
+          <div className="posts">
+            {posts.map((post: PostType, index: number) => (
+              <Post key={index} {...post} />
+            ))}
+          </div>
+          <LoadMore />
         </div>
-    )
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
