@@ -1,0 +1,157 @@
+.footer {
+    background: #FFC581;
+}
+
+.footer .footer-wrapper {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer .footer-wrapper .footer-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer .subscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 96px 0 75px 0;
+}
+
+.footer .subscription .subscription-text {
+    font-family: "Lexend", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 38px;
+}
+
+.footer .subscription .subscription-input {
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    width: 22em;
+    height: 43px;
+    border: 1px solid black;
+    border-radius: 22px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.form-icon {
+    font-size: 18px;
+    color: #00000080;
+    pointer-events: none;
+    padding-left: 16px;
+}
+
+.form-input {
+    font-family: "Manrope", sans-serif;
+    font-size: 1em;
+    color: black;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 3em;
+    padding: 0 1em 0 8px;
+}
+
+.form-input::placeholder {
+    color: #00000080;
+}
+
+.form-button {
+    width: 113px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    color: #000000;
+    background-color: #DB5408;
+    padding: 1em;
+    border: none;
+    border-left: 1px solid black;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.form-button:hover {
+    background-color: #e25f1b;
+    box-shadow: 0 4px 8px #26262626;
+    transform: translateY(-2px);
+}
+
+.form-button:active {
+    background-color: #c74400;
+    box-shadow: 0 2px 4px #1a1a1a1a;
+    transform: translateY(0);
+}
+
+.form-input:-webkit-autofill,
+.form-input:-webkit-autofill:hover,
+.form-input:-webkit-autofill:focus,
+.form-input:-webkit-autofill:active {
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+.footer .footer-navigation {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.footer .footer-navigation .logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.footer .footer-navigation .logo-link span {
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    margin-left: 20px;
+}
+
+.footer .footer-navigation .routes {
+    display: flex;
+    flex-direction: row;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000B2;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer hr {
+    background-color: black;
+    width: 100%;
+    height: 1px;
+    border: none;
+    margin: 25px 0;
+}
+
+.footer .metadata {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.footer .metadata .social {
+    display: flex;
+    gap: 24px;
+}
+
