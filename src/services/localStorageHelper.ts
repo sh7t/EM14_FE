@@ -1,5 +1,6 @@
 import type {Category} from "../types/category.ts";
 import type {Book} from "../types/book.ts";
+import type {Author} from "../types/author.ts";
 
 function getFromLocalStorage<T>(key: string):T | null
 {
@@ -35,4 +36,9 @@ export function getCategories(): Category[] | null
 export function getBooks(): Book[] | null
 {
     return getFromLocalStorage<Book[]>("books")
+}
+
+export function getAuthors(): Author[] | null
+{
+    return getFromLocalStorage<Author[]>("authors")
 }

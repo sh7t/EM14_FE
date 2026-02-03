@@ -1,0 +1,57 @@
+.book-preview {
+    max-width: 220px;
+    max-height: 450px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.title span {
+    display: -webkit-box;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.author {
+    display: flex;
+    justify-content: center;
+}
+
+.author span {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.add-to-cart {
+    display: flex;
+    justify-content: center;
+}
+
+.add-to-cart button {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #000000;
+    background-color: #DB5408;
+    border: none;
+    width: 100%;
+    padding: 8px 22px;
+    margin-top: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px #1a1a1a1a;
+    transition: all 0.2s ease;
+}
+
+.add-to-cart button:hover {
+    background-color: #e25f1b;
+    box-shadow: 0 6px 10px #26262626;
+    transform: translateY(-2px);
+}
