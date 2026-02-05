@@ -4,30 +4,6 @@ const HomePage = () => {
     return (
         <main className="main">
             <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
-            <p>Home page!</p>
         </main>
     );
 };
