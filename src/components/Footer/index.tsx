@@ -1,6 +1,7 @@
 import "./style.css"
 import logo from "../../assets/UI/book-haven.svg";
 import {FaTwitter, FaFacebook, FaLinkedin, FaYoutube} from "react-icons/fa";
+import LocaleDropdown from "../LocaleDropdown";
 
 const Footer = () => {
     return (
@@ -41,9 +42,7 @@ const Footer = () => {
                     </div>
                     <hr/>
                     <div className="metadata">
-                        <div className="locale-dropdown">
-                            <img src="https://placehold.co/127x35" alt="placehold.co"/>
-                        </div>
+                        <LocaleDropdown />
                         <div className="legal">
                             <p>© 2026 by numb
                                 • <a href="https://github.com/sh7t" target="_blank">Privacy</a>

@@ -1,15 +1,26 @@
 import "./style.css"
 import BookPreview from "../../components/BookPreview";
-import {getAuthors, getBooks} from "../../services/localStorageHelper.ts";
-import type { Book } from "../../types/book.ts";
+import {getAuthors, getBooks, getCategories} from "../../services/localStorageHelper.ts";
+import type {Book} from "../../types/book.ts";
 import type {Author} from "../../types/author.ts";
+import type {Category} from "../../types/category.ts";
 
 const BooksPage = () => {
     const books: Book[] = getBooks() || [];
     const authors: Author[] = getAuthors() || [];
+    const categories: Category[] = getCategories() || [];
 
     return (
         <main className="main">
+            <div className="categories">
+                {categories.map((category: Category) => {
+                    return (
+                        <label className="category">
+                            <input type="checkbox" value={category.name} defaultChecked/>
+                            <span>{category.name}</span>
+                        </label>)
+                })}
+            </div>
             <div className="books-preview">
                 {books.map((book: Book) => (
                     <BookPreview
