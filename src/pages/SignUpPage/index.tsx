@@ -1,14 +1,14 @@
 import "./style.css"
 import Layout from "../layout/Layout";
 
-const HomePage = () => {
+const SignUpPage = () => {
     return (
         <Layout>
             <main className="main">
-                <p>Home page!</p>
+                <p>Sign Up Page!</p>
             </main>
         </Layout>
     );
 };
 
-export default HomePage;
+export default SignUpPage;

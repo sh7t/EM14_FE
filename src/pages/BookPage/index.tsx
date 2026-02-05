@@ -1,10 +1,13 @@
 import "./style.css"
+import Layout from "../layout/Layout";
 
 const BookPage = () => {
     return (
-        <main className="main">
-            <p>Single book!</p>
-        </main>
+        <Layout>
+            <main className="main">
+                <p>Single book!</p>
+            </main>
+        </Layout>
     );
 };
 

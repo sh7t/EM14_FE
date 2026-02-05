@@ -1,10 +1,13 @@
 import "./style.css"
+import Layout from "../layout/Layout";
 
 const AboutPage = () => {
     return (
-        <main className="main">
-            <p>About us!</p>
-        </main>
+        <Layout>
+            <main className="main">
+                <p>About us!</p>
+            </main>
+        </Layout>
     );
 };
 
