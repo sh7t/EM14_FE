@@ -6,6 +6,7 @@ import BooksPage from "./pages/BooksPage";
 import BookPage from "./pages/BookPage";
 import AboutPage from "./pages/AboutPage";
 import SignUpPage from "./pages/SignUpPage";
+import SignInPage from "./pages/SignInPage";
 // import authors from "./fixtures/authors.json"
 //import books from "./fixtures/books.json"
 // import categories from "./fixtures/categories.json"
@@ -23,6 +24,7 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/books" element={<BooksPage/>}/>
             <Route path="/book" element={<BookPage/>}/>
             <Route path="/signup" element={<SignUpPage />}/>
+            <Route path="/signin" element={<SignInPage />}/>
         </Routes>
     </BrowserRouter>
 );
