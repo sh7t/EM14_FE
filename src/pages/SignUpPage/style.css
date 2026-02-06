@@ -1,0 +1,70 @@
+.sign-up-card {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 448px;
+    height: 100%;
+    padding: 20px;
+    font-family: "Manrope", sans-serif;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow:
+            0 20px 25px -5px #0000001A,
+            0 10px 10px -5px #0000000A;
+
+}
+
+.sign-up-card .user-plus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #DB5408;
+    border-radius: 12px;
+    border: none;
+    padding: 7px;
+}
+
+.sign-up-card .sign-up-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sign-up-card .sign-up-form label {
+    margin: 15px 0 5px 0;
+    font-weight: bold;
+}
+
+.sign-up-card .sign-up-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #F3F3F5;
+    font-size: 16px;
+    font-family: "Manrope", sans-serif;
+}
+
+.sign-up-card input[type="submit"] {
+    background-color: #DB5408;
+    color: #FFFFFF;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 120px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.existing-account {
+    color: #999999;
+}
+
+.existing-account a {
+    color: #CC4903CD;
+    text-decoration: underline;
+}
