@@ -1,8 +1,10 @@
 import "./style.css";
 import logo from "../../assets/UI/book-haven.svg";
+import {useNavigate} from "react-router";
 
 
 const Header = () => {
+    const navigate = useNavigate();
     return (
         <header className="header">
             <div className="header-wrapper">
@@ -22,8 +24,8 @@ const Header = () => {
                     </div>
 
                     <div className="auth">
-                        <button className="auth-button" id="log-in">Log in</button>
-                        <button className="auth-button" id="sign-in">Join us</button>
+                        <button className="auth-button" id="log-in" onClick={() => {navigate("/signin")}}>Log in</button>
+                        <button className="auth-button" id="sign-in" onClick={() => {navigate("/signup")}}>Join us</button>
                     </div>
                 </div>
             </div>
