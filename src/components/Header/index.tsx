@@ -18,14 +18,14 @@ const Header = () => {
 
                     <div className="routes">
                         <a className="route" href="/">Home</a>
-                        <a className="route" href="/about">About us</a>
+                        <a className="route" href="/about_us">About us</a>
                         <a className="route" href="/books">Books</a>
                         <a className="route" href="https://tinyurl.com/thinking-gif" target="_blank">Contact us</a>
                     </div>
 
                     <div className="auth">
-                        <button className="auth-button" id="log-in" onClick={() => {navigate("/signin")}}>Log in</button>
-                        <button className="auth-button" id="sign-in" onClick={() => {navigate("/signup")}}>Join us</button>
+                        <button className="auth-button" id="log-in" onClick={() => {navigate("/sign_in")}}>Log in</button>
+                        <button className="auth-button" id="sign-in" onClick={() => {navigate("/sign_up")}}>Join us</button>
                     </div>
                 </div>
             </div>
