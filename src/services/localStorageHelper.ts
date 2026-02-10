@@ -51,8 +51,8 @@ export function getPopularBooks(): Book[] | null
     return getFromLocalStorage<Book[]>("popularBooks")
 }
 
-export function getBooksWithAuthor(): BookWithAuthorName[] | null {
-    const books = getBooks();
+export function getBooksWithAuthor(isPopular: boolean = false): BookWithAuthorName[] | null {
+    const books = isPopular ? getPopularBooks() : getBooks();
     const authors = getAuthors();
 
     if (books && authors) {

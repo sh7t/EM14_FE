@@ -3,12 +3,10 @@ import Layout from "../layout/Layout";
 import homeSearchImage from "../../assets/UI/home-search.svg"
 import {FaSearch} from "react-icons/fa"
 import UnbuyableBookPreview from "../../components/UnbuyableBookPreview";
-import {getAuthors, getPopularBooks} from "../../services/localStorageHelper.ts";
-import type {Author} from "../../types/author.ts";
+import {getBooksWithAuthor} from "../../services/localStorageHelper.ts";
 
 const HomePage = () => {
-    const popularBooks = getPopularBooks() || [];
-    const authors = getAuthors() || [];
+    const popularBooksWithAuthorName = getBooksWithAuthor(true) || [];
 
     return (
         <Layout>
@@ -42,10 +40,10 @@ const HomePage = () => {
                 <div className="popular-books">
                     <h2 className="popular-books-title">Popular books</h2>
                     <div className="popular-books-preview">
-                        {popularBooks.map((book) => (
-                            <UnbuyableBookPreview title={book.title}
-                                                  authorName={authors.find((author: Author) => author.id === book.authorId)?.name || "Author Name"}
-                                                  coverUrl={book.image} price={book.price}/>
+                        {popularBooksWithAuthorName.map((bookWithAuthorName) => (
+                            <UnbuyableBookPreview title={bookWithAuthorName.title}
+                                                  authorName={bookWithAuthorName.authorName || "Author Name"}
+                                                  coverUrl={bookWithAuthorName.image} price={bookWithAuthorName.price}/>
                         ))}
                     </div>
                 </div>
