@@ -2,6 +2,7 @@ import type {Category} from "../types/category.ts";
 import type {Book} from "../types/book.ts";
 import type {Author} from "../types/author.ts";
 import type {User} from "../types/user.ts";
+import type {BookWithAuthorName} from "../types/bookWithAuthorName.ts";
 
 function getFromLocalStorage<T>(key: string):T | null
 {
@@ -43,6 +44,29 @@ export function getAuthors(): Author[] | null
 {
     return getFromLocalStorage<Author[]>("authors")
 }
+
+
+export function getPopularBooks(): Book[] | null
+{
+    return getFromLocalStorage<Book[]>("popularBooks")
+}
+
+export function getBooksWithAuthor(): BookWithAuthorName[] | null {
+    const books = getBooks();
+    const authors = getAuthors();
+
+    if (books && authors) {
+        return books.map(book => {
+            const author = authors.find(a => a.id === book.authorId);
+            return {
+                ...book,
+                authorName: author ? author.name : null
+            };
+        });
+    }
+    return null;
+}
+
 
 export function saveUser(user: User){
     const users = getFromLocalStorage<User[]>("users") || [];
