@@ -1,5 +1,5 @@
 import "./style.css"
-import BookPreview from "../../components/BookPreview";
+import BuyableBookPreview from "../../components/BuyableBookPreview";
 import {getAuthors, getBooks, getCategories} from "../../services/localStorageHelper.ts";
 import type {Book} from "../../types/book.ts";
 import type {Author} from "../../types/author.ts";
@@ -25,7 +25,7 @@ const BooksPage = () => {
                 </div>
                 <div className="books-preview">
                     {books.map((book: Book) => (
-                        <BookPreview
+                        <BuyableBookPreview
                             key={book.id}
                             title={book.title}
                             authorName={authors.find((author: Author) => author.id === book.authorId)?.name || "John Doe"}
