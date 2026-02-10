@@ -1,13 +1,13 @@
 import "./style.css"
 import {useNavigate} from "react-router";
 
-type BookPreviewProps = {
+type BuyableBookPreviewProps = {
     title: string;
     authorName: string;
     coverUrl: string;
 }
 
-const BookPreview = (props: BookPreviewProps) => {
+const BuyableBookPreview = (props: BuyableBookPreviewProps) => {
     const navigate = useNavigate();
     return (
         <div className="book-preview">
@@ -30,4 +30,4 @@ const BookPreview = (props: BookPreviewProps) => {
     )
 }
 
-export default BookPreview;
+export default BuyableBookPreview;
