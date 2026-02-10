@@ -10,18 +10,18 @@ type BuyableBookPreviewProps = {
 const BuyableBookPreview = (props: BuyableBookPreviewProps) => {
     const navigate = useNavigate();
     return (
-        <div className="book-preview">
-            <div className="clickable-preview" onClick={() => navigate("/")}>
-                <div className="cover">
+        <div className="buyable-book-preview">
+            <div className="buyable-clickable-preview" onClick={() => navigate("/")}>
+                <div className="buyable-cover">
                     <img src={props.coverUrl} alt="Cover"/>
                 </div>
-                <div className="title">
+                <div className="buyable-title">
                     <span>{props.title}</span>
                 </div>
-                <div className="author">
+                <div className="buyable-author">
                     <span>{props.authorName}</span>
                 </div>
-                <div className="add-to-cart">
+                <div className="buyable-add-to-cart">
                     <button>Add to cart</button>
                 </div>
             </div>
