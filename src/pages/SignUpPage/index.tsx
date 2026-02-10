@@ -4,23 +4,19 @@ import React from "react";
 import {FaUserPlus} from "react-icons/fa";
 import type {User} from "../../types/user.ts";
 import {useNavigate} from "react-router";
-import {saveCurrentUserToken, saveUser} from "../../services/localStorageHelper.ts";
-
+import {saveCurrentUserToken, saveUser, isEmpty} from "../../services/localStorageHelper.ts";
+import {generateToken} from "../../services/tokenGenerator.ts";
 
 const SignUpPage = () => {
+    const navigate = useNavigate();
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        function isEmpty(str: string) {
-            return str === undefined || str === null || str === "";
-        }
-
-        const navigate = useNavigate();
         const formData = new FormData(event.currentTarget);
         const fullName = formData.get("full-name") as string;
         const email = formData.get("email") as string;
         const password = formData.get("password") as string;
-        const token = "1"; // todo
+        const token = generateToken() as string;
 
         const fullNameRegexp = /^\S+\s+\S+/;
         const emailRegexp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

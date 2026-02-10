@@ -45,7 +45,9 @@ export function getAuthors(): Author[] | null
 }
 
 export function saveUser(user: User){
-    saveToLocalStorage<User>('users', user);
+    const users = getFromLocalStorage<User[]>("users") || [];
+    users.push(user);
+    saveToLocalStorage<User[]>('users', users);
 }
 
 export function saveCurrentUserToken(token: string){
@@ -53,16 +55,17 @@ export function saveCurrentUserToken(token: string){
 }
 
 export function checkToken(): boolean {
+    let checkResult = false;
     const savedToken = getFromLocalStorage<string>('currentUserToken');
     const users = getFromLocalStorage<User[]>('users');
 
     users?.forEach(user => {
         if (user.token === savedToken) {
-            return true;
+            checkResult = true;
         }
     });
 
-    return false;
+    return checkResult;
 }
 
 export function loginUser(email: string, password: string): boolean {
@@ -75,4 +78,8 @@ export function loginUser(email: string, password: string): boolean {
         }
     }
     return false;
+}
+
+export function isEmpty(str: string) {
+    return str === undefined || str === null || str === "";
 }
