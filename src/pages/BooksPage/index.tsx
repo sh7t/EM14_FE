@@ -1,14 +1,12 @@
 import "./style.css"
 import BuyableBookPreview from "../../components/BuyableBookPreview";
-import {getAuthors, getBooks, getCategories} from "../../services/localStorageHelper.ts";
-import type {Book} from "../../types/book.ts";
-import type {Author} from "../../types/author.ts";
+import {getBooksWithAuthor, getCategories} from "../../services/localStorageHelper.ts";
 import type {Category} from "../../types/category.ts";
 import Layout from "../layout/Layout";
+import type {BookWithAuthorName} from "../../types/bookWithAuthorName.ts";
 
 const BooksPage = () => {
-    const books: Book[] = getBooks() || [];
-    const authors: Author[] = getAuthors() || [];
+    const booksWithAuthorName = getBooksWithAuthor() || [];
     const categories: Category[] = getCategories() || [];
 
     return (
@@ -17,19 +15,19 @@ const BooksPage = () => {
                 <div className="categories">
                     {categories.map((category: Category) => {
                         return (
-                            <label className="category">
+                            <label className="category" key={category.id}>
                                 <input type="checkbox" value={category.name} defaultChecked/>
                                 <span>{category.name}</span>
                             </label>)
                     })}
                 </div>
                 <div className="books-preview">
-                    {books.map((book: Book) => (
+                    {booksWithAuthorName.map((bookWithAuthorName: BookWithAuthorName)=> (
                         <BuyableBookPreview
-                            key={book.id}
-                            title={book.title}
-                            authorName={authors.find((author: Author) => author.id === book.authorId)?.name || "Author Name"}
-                            coverUrl={book.image}
+                            key={bookWithAuthorName.id}
+                            title={bookWithAuthorName.title}
+                            authorName={bookWithAuthorName.authorName || "Author Name"}
+                            coverUrl={bookWithAuthorName.image}
                         />
                     ))}
                 </div>
