@@ -28,7 +28,7 @@ const BooksPage = () => {
                         <BuyableBookPreview
                             key={book.id}
                             title={book.title}
-                            authorName={authors.find((author: Author) => author.id === book.authorId)?.name || "John Doe"}
+                            authorName={authors.find((author: Author) => author.id === book.authorId)?.name || "Author Name"}
                             coverUrl={book.image}
                         />
                     ))}
