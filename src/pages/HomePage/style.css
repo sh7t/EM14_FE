@@ -85,7 +85,9 @@
 .popular-books-preview {
     display: flex;
     flex-wrap: wrap;
-    gap: 45px;
+    margin: 0 auto;
+    gap: 95px;
+    max-width: 1165px;
 }
 
 .popular-books-title {

@@ -1,9 +1,9 @@
 import "./style.css"
-import BuyableBookPreview from "../../components/BuyableBookPreview";
 import {getBooksWithAuthor, getCategories} from "../../services/localStorageHelper.ts";
 import type {Category} from "../../types/category.ts";
 import Layout from "../layout/Layout";
 import type {BookWithAuthorName} from "../../types/bookWithAuthorName.ts";
+import BookPreview from "../../components/BookPreview";
 
 const BooksPage = () => {
     const booksWithAuthorName = getBooksWithAuthor() || [];
@@ -23,9 +23,10 @@ const BooksPage = () => {
                 </div>
                 <div className="books-preview">
                     {booksWithAuthorName.map((bookWithAuthorName: BookWithAuthorName)=> (
-                        <BuyableBookPreview
+                        <BookPreview
                             key={bookWithAuthorName.id}
                             title={bookWithAuthorName.title}
+                            variant={"buyable"}
                             authorName={bookWithAuthorName.authorName || "Author Name"}
                             coverUrl={bookWithAuthorName.image}
                         />

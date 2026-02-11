@@ -2,8 +2,8 @@ import "./style.css"
 import Layout from "../layout/Layout";
 import homeSearchImage from "../../assets/UI/home-search.svg"
 import {FaSearch} from "react-icons/fa"
-import UnbuyableBookPreview from "../../components/UnbuyableBookPreview";
 import {getBooksWithAuthor} from "../../services/localStorageHelper.ts";
+import BookPreview from "../../components/BookPreview";
 
 const HomePage = () => {
     const popularBooksWithAuthorName = getBooksWithAuthor(true) || [];
@@ -41,9 +41,9 @@ const HomePage = () => {
                     <h2 className="popular-books-title">Popular books</h2>
                     <div className="popular-books-preview">
                         {popularBooksWithAuthorName.map((bookWithAuthorName) => (
-                            <UnbuyableBookPreview title={bookWithAuthorName.title}
-                                                  authorName={bookWithAuthorName.authorName || "Author Name"}
-                                                  coverUrl={bookWithAuthorName.image} price={bookWithAuthorName.price}/>
+                            <BookPreview key={bookWithAuthorName.id} title={bookWithAuthorName.title} variant={"unbuyable"}
+                                         authorName={bookWithAuthorName.authorName || "Author Name"}
+                                         coverUrl={bookWithAuthorName.image} price={bookWithAuthorName.price}/>
                         ))}
                     </div>
                 </div>
