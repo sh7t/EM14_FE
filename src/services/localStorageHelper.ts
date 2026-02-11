@@ -4,8 +4,7 @@ import type {Author} from "../types/author.ts";
 import type {User} from "../types/user.ts";
 import type {BookWithAuthorName} from "../types/bookWithAuthorName.ts";
 
-function getFromLocalStorage<T>(key: string):T | null
-{
+function getFromLocalStorage<T>(key: string): T | null {
     try {
         const value = localStorage.getItem(key);
         if (value) {
@@ -16,6 +15,7 @@ function getFromLocalStorage<T>(key: string):T | null
     }
     return null;
 }
+
 export function saveToLocalStorage<T>(key: string, value: T): void {
     try {
         localStorage.setItem(key, JSON.stringify(value));
@@ -23,6 +23,7 @@ export function saveToLocalStorage<T>(key: string, value: T): void {
         console.error("Error saving to localStorage", error);
     }
 }
+
 export function removeFromLocalStorage(key: string): void {
     try {
         localStorage.removeItem(key);
@@ -30,25 +31,30 @@ export function removeFromLocalStorage(key: string): void {
         console.error("Error removing from localStorage", error);
     }
 }
-export function getCategories(): Category[] | null
-{
+
+export function getCategories(): Category[] | null {
     return getFromLocalStorage<Category[]>("categories")
 }
 
-export function getBooks(): Book[] | null
-{
-    return getFromLocalStorage<Book[]>("books")
-}
-
-export function getAuthors(): Author[] | null
-{
+export function getAuthors(): Author[] | null {
     return getFromLocalStorage<Author[]>("authors")
 }
 
+export function getBooks(): Book[] | null {
+    return getFromLocalStorage<Book[]>("books")
+}
 
-export function getPopularBooks(): Book[] | null
-{
+export function getPopularBooks(): Book[] | null {
     return getFromLocalStorage<Book[]>("popularBooks")
+}
+
+export function getBookById(bookId: number): Book | null {
+    const books = getPopularBooks();
+    if (books) {
+        const book = books.find((b) => b.id === bookId);
+        return book ? book : null;
+    }
+    return null;
 }
 
 export function getBooksWithAuthor(isPopular: boolean = false): BookWithAuthorName[] | null {
@@ -67,14 +73,13 @@ export function getBooksWithAuthor(isPopular: boolean = false): BookWithAuthorNa
     return null;
 }
 
-
-export function saveUser(user: User){
+export function saveUser(user: User) {
     const users = getFromLocalStorage<User[]>("users") || [];
     users.push(user);
     saveToLocalStorage<User[]>('users', users);
 }
 
-export function saveCurrentUserToken(token: string){
+export function saveCurrentUserToken(token: string) {
     saveToLocalStorage<string>('currentUserToken', token);
 }
 
@@ -82,13 +87,11 @@ export function checkToken(): boolean {
     let checkResult = false;
     const savedToken = getFromLocalStorage<string>('currentUserToken');
     const users = getFromLocalStorage<User[]>('users');
-
     users?.forEach(user => {
         if (user.token === savedToken) {
             checkResult = true;
         }
     });
-
     return checkResult;
 }
 
