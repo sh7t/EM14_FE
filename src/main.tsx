@@ -8,6 +8,7 @@ import AboutPage from "./pages/AboutPage";
 import SignUpPage from "./pages/SignUpPage";
 import SignInPage from "./pages/SignInPage";
 import {checkToken} from "./services/localStorageHelper.ts";
+import NotFoundPage from "./pages/NotFoundPage";
 // import authors from "./fixtures/authors.json"
 // import books from "./fixtures/books.json"
 // import categories from "./fixtures/categories.json"
@@ -28,6 +29,7 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/about_us" element={<AboutPage/>}/>
             <Route path="/books" element={checkToken() ? <BooksPage/> : <Navigate to="/sign_in"/>}/>
             <Route path="/book/:bookId" element={checkToken() ? <BookPage/> : <Navigate to="/sign_in" />}/>
+            <Route path="*" element={<NotFoundPage />} />
         </Routes>
     </BrowserRouter>
 );

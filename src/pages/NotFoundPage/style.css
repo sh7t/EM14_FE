@@ -1,0 +1,62 @@
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-found .not-found-oops {
+    font-family: "Oi", sans-serif;
+    font-size: clamp(16px, 10vw, 200px);
+    letter-spacing: clamp(-15px, -0.78vw, -5px);
+    background: radial-gradient(circle at 20% 30%, #DB5408 5%, #000000 25%),
+    radial-gradient(circle at 70% 10%, #DB5408 10%, #000000 30%),
+    radial-gradient(circle at 50% 80%, #DB5408 7%, #000000 35%),
+    radial-gradient(circle at 10% 90%, #DB5408 8%, #000000 32%),
+    #000000;
+    background-blend-mode: screen;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.not-found .not-found-message, .not-found-description {
+    font-family: "Manrope", sans-serif;
+    text-align: center;
+}
+
+.not-found .not-found-message {
+    margin-top: -40px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.not-found .not-found-message span {
+    font-weight: 1000;
+    color: #DB5408;
+}
+
+.not-found .not-found-description {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.not-found .not-found-home {
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-size: 25px;
+    color: #FFFFFF;
+    background-color: #DB5408;
+    border: none;
+    border-radius: 9px;
+    padding: 10px 25px;
+    margin: 10px 0;
+    cursor: pointer;
+    box-shadow: 0 4px 6px #1a1a1a1a;
+    transition: all 0.2s ease;
+}
+
+.not-found .not-found-home:hover {
+    background-color: #e25f1b;
+    box-shadow: 0 6px 10px #26262626;
+    transform: translateY(-2px);
+}
