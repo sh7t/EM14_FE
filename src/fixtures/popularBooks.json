@@ -1,7 +1,7 @@
 [
   {
     "id": 11,
-    "image": "https://placehold.co/220x300",
+    "image": "https://i.ibb.co/pjKGLz42/Carrie.jpg",
     "categoryId": 5,
     "title": "Carrie",
     "authorId": 4,
@@ -16,7 +16,7 @@
   },
   {
     "id": 12,
-    "image": "https://placehold.co/220x300",
+    "image": "https://i.ibb.co/pj77Q6dm/Misery.jpg",
     "categoryId": 5,
     "title": "Misery",
     "authorId": 4,
@@ -31,7 +31,7 @@
   },
   {
     "id": 13,
-    "image": "https://placehold.co/220x300",
+    "image": "https://i.ibb.co/d4KNhWbz/Murder-Orient-Express.jpg",
     "categoryId": 4,
     "title": "Murder Orient Express",
     "authorId": 5,
@@ -46,7 +46,7 @@
   },
   {
     "id": 14,
-    "image": "https://placehold.co/220x300",
+    "image": "https://i.ibb.co/ymDXX40d/Death-Nile.jpg",
     "categoryId": 4,
     "title": "Death Nile",
     "authorId": 5,
@@ -61,9 +61,9 @@
   },
   {
     "id": 15,
-    "image": "https://placehold.co/220x300",
+    "image": "https://i.ibb.co/rKtdV4yw/And-Then-None.jpg",
     "categoryId": 4,
-    "title": "And Then None",
+    "title": "And Then There Were None",
     "authorId": 5,
     "shortDescription": "Isolated mystery",
     "description": "Ten strangers trapped.",
@@ -76,7 +76,7 @@
   },
   {
     "id": 16,
-    "image": "https://placehold.co/220x300",
+    "image": "https://i.ibb.co/Lqb0ztP/Long-Walk-Freedom.jpg",
     "categoryId": 6,
     "title": "Long Walk Freedom",
     "authorId": 1,
@@ -91,7 +91,7 @@
   },
   {
     "id": 17,
-    "image": "https://placehold.co/220x300",
+    "image": "https://i.ibb.co/bjs13m7t/World-War-II.jpg",
     "categoryId": 7,
     "title": "World War II",
     "authorId": 3,
@@ -106,7 +106,7 @@
   },
   {
     "id": 18,
-    "image": "https://placehold.co/220x300",
+    "image": "https://i.ibb.co/Cp2sTkpn/Ancient-Rome.jpg",
     "categoryId": 7,
     "title": "Ancient Rome",
     "authorId": 5,
