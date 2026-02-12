@@ -4,6 +4,7 @@ import type {Category} from "../../types/category.ts";
 import Layout from "../layout/Layout";
 import type {BookWithAuthorName} from "../../types/bookWithAuthorName.ts";
 import BookPreview from "../../components/BookPreview";
+import SignUpForCollection from "../../components/SignUpForCollection";
 
 const BooksPage = () => {
     const booksWithAuthorName = getBooksWithAuthor() || [];
@@ -33,10 +34,7 @@ const BooksPage = () => {
                         />
                     ))}
                 </div>
-                <div className="sign-up">
-                    <span>Sign up for our new collection</span>
-                    <button>Sign Up</button>
-                </div>
+                <SignUpForCollection />
             </main>
         </Layout>
     );
