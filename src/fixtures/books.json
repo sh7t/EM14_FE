@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/352YrXR1/1984.jpg",
       "categoryId": 1,
       "title": "1984",
       "authorId": 1,
@@ -16,7 +16,7 @@
     },
     {
       "id": 2,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/HDR18R10/Harry-Potter-1.jpg",
       "categoryId": 2,
       "title": "Harry Potter 1",
       "authorId": 2,
@@ -31,7 +31,7 @@
     },
     {
       "id": 3,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/HDR18R10/Harry-Potter-2.jpg",
       "categoryId": 2,
       "title": "Harry Potter 2",
       "authorId": 2,
@@ -46,7 +46,7 @@
     },
     {
       "id": 4,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/HDR18R10/Harry-Potter-3.jpg",
       "categoryId": 2,
       "title": "Harry Potter 3",
       "authorId": 2,
@@ -61,7 +61,7 @@
     },
     {
       "id": 5,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/My7tMLZq/The-Hobbit.jpg",
       "categoryId": 3,
       "title": "The Hobbit",
       "authorId": 3,
@@ -76,7 +76,7 @@
     },
     {
       "id": 6,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/4gCT1Hpr/LOTR-Fellowship.jpg",
       "categoryId": 2,
       "title": "LOTR Fellowship",
       "authorId": 3,
@@ -91,7 +91,7 @@
     },
     {
       "id": 7,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/NdHJthTy/LOTR-Two-Towers.jpg",
       "categoryId": 2,
       "title": "LOTR Two Towers",
       "authorId": 3,
@@ -106,7 +106,7 @@
     },
     {
       "id": 8,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/Kn6rQ71/LOTR-Return-King.jpg",
       "categoryId": 2,
       "title": "LOTR Return King",
       "authorId": 3,
@@ -121,7 +121,7 @@
     },
     {
       "id": 9,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/hFh3w2g2/The-Shining.jpg",
       "categoryId": 5,
       "title": "The Shining",
       "authorId": 4,
@@ -136,7 +136,7 @@
     },
     {
       "id": 10,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/RGTqLcpv/IT.jpg",
       "categoryId": 5,
       "title": "IT",
       "authorId": 4,
@@ -151,7 +151,7 @@
     },
     {
       "id": 11,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/pjKGLz42/Carrie.jpg",
       "categoryId": 5,
       "title": "Carrie",
       "authorId": 4,
@@ -166,7 +166,7 @@
     },
     {
       "id": 12,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/pj77Q6dm/Misery.jpg",
       "categoryId": 5,
       "title": "Misery",
       "authorId": 4,
@@ -181,7 +181,7 @@
     },
     {
       "id": 13,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/d4KNhWbz/Murder-Orient-Express.jpg",
       "categoryId": 4,
       "title": "Murder Orient Express",
       "authorId": 5,
@@ -196,7 +196,7 @@
     },
     {
       "id": 14,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/ymDXX40d/Death-Nile.jpg",
       "categoryId": 4,
       "title": "Death Nile",
       "authorId": 5,
@@ -211,9 +211,9 @@
     },
     {
       "id": 15,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/rKtdV4yw/And-Then-None.jpg",
       "categoryId": 4,
-      "title": "And Then None",
+      "title": "And Then There Were None",
       "authorId": 5,
       "shortDescription": "Isolated mystery",
       "description": "Ten strangers trapped.",
@@ -226,10 +226,10 @@
     },
     {
       "id": 16,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/Lqb0ztP/Long-Walk-Freedom.jpg",
       "categoryId": 6,
       "title": "Long Walk Freedom",
-      "authorId": 1,
+      "authorId": 6,
       "shortDescription": "Mandela memoir",
       "description": "Autobiography of Nelson Mandela.",
       "price": 22.99,
@@ -241,7 +241,7 @@
     },
     {
       "id": 17,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/bjs13m7t/World-War-II.jpg",
       "categoryId": 7,
       "title": "World War II",
       "authorId": 3,
@@ -256,7 +256,7 @@
     },
     {
       "id": 18,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/Cp2sTkpn/Ancient-Rome.jpg",
       "categoryId": 7,
       "title": "Ancient Rome",
       "authorId": 5,
@@ -271,7 +271,7 @@
     },
     {
       "id": 19,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/yH8qjdb/Animal-Farm.jpg",
       "categoryId": 1,
       "title": "Animal Farm",
       "authorId": 1,
@@ -286,7 +286,7 @@
     },
     {
       "id": 20,
-      "image": "https://placehold.co/220x300",
+      "image": "https://i.ibb.co/TBQSK6Pm/Foundation.jpg",
       "categoryId": 3,
       "title": "Foundation",
       "authorId": 2,
