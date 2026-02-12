@@ -1,5 +1,6 @@
 import "./style.css"
 import {useNavigate} from "react-router"
+import AddToCart from "../AddToCart";
 
 type BookPreviewProps = {
     id: number,
@@ -28,7 +29,7 @@ const BookPreview = (props: BookPreviewProps) => {
 
                 {props.variant === "buyable" && (
                     <div className="book-preview-footer">
-                        <button>Add to cart</button>
+                        <AddToCart />
                     </div>
                 )}
 
