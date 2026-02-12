@@ -56,16 +56,21 @@ function getPopularBooks(top: number = 8): Book[] | null {
     return null;
 }
 
-export function getNewestBooks(count: number = 5): Book[] | null {
+export function getNewestBooksWithAuthor(count: number = 5): BookWithAuthorName[] | null {
     const books = getBooks();
-    if (books) {
+    const authors = getAuthors();
+    if (books && authors) {
         return [...books]
-            .sort((a, b) =>
-                new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-            )
-            .slice(0, count);
+            .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+            .slice(0, count)
+            .map(book => {
+                const author = authors.find(a => a.id === book.authorId);
+                return {
+                    ...book,
+                    authorName: author ? author.name : null
+                };
+            });
     }
-
     return null;
 }
 
