@@ -41,7 +41,8 @@ const HomePage = () => {
                     <h2 className="popular-books-title">Popular books</h2>
                     <div className="popular-books-preview">
                         {popularBooksWithAuthorName.map((bookWithAuthorName) => (
-                            <BookPreview key={bookWithAuthorName.id} title={bookWithAuthorName.title} variant={"unbuyable"}
+                            <BookPreview key={bookWithAuthorName.id} id={bookWithAuthorName.id}
+                                         title={bookWithAuthorName.title} variant={"unbuyable"}
                                          authorName={bookWithAuthorName.authorName || "Author Name"}
                                          coverUrl={bookWithAuthorName.image} price={bookWithAuthorName.price}/>
                         ))}
