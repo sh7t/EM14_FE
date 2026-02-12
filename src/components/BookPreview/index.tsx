@@ -2,6 +2,7 @@ import "./style.css"
 import {useNavigate} from "react-router"
 
 type BookPreviewProps = {
+    id: number,
     title: string;
     authorName: string;
     coverUrl: string;
@@ -16,7 +17,7 @@ const BookPreview = (props: BookPreviewProps) => {
         <div className={`book-preview book-preview--${props.variant}`}>
             <div
                 className="book-preview-clickable"
-                onClick={() => navigate("/")}>
+                onClick={() => navigate("/book/" + props.id)}>
                 <div className="book-preview-cover">
                     <img src={props.coverUrl} alt="Cover"/>
                 </div>
