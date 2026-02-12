@@ -64,8 +64,8 @@ export function getBookById(bookId: number): Book | null {
     return null;
 }
 
-export function getBooksWithAuthor(isPopular: boolean = false): BookWithAuthorName[] | null {
-    const books = isPopular ? getPopularBooks() : getBooks();
+export function getBooksWithAuthor(isPopular: boolean = false, top?: number): BookWithAuthorName[] | null {
+    const books = isPopular ? getPopularBooks(top) : getBooks();
     const authors = getAuthors();
 
     if (books && authors) {
