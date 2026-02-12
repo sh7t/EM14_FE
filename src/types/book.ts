@@ -12,6 +12,7 @@ export type Book = {
     discountPrice: number;
     pageCount: number;
     status: bookStatus;
+    topPlacement: number;
     createdAt: string;
     updatedAt: string;
 }

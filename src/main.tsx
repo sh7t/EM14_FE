@@ -12,12 +12,10 @@ import NotFoundPage from "./pages/NotFoundPage";
 // import authors from "./fixtures/authors.json"
 // import books from "./fixtures/books.json"
 // import categories from "./fixtures/categories.json"
-// import popularBooks from "./fixtures/popularBooks.json"
 
 // localStorage.setItem("authors", JSON.stringify(authors));
 // localStorage.setItem("books", JSON.stringify(books));
 // localStorage.setItem("categories", JSON.stringify(categories));
-// localStorage.setItem("popularBooks", JSON.stringify(popularBooks));
 
 
 createRoot(document.getElementById("root")!).render(

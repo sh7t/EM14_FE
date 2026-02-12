@@ -11,6 +11,7 @@
       "discountPrice": 12.99,
       "pageCount": 328,
       "status": "AVAILABLE",
+      "topPlacement": 18,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -26,6 +27,7 @@
       "discountPrice": 18.99,
       "pageCount": 320,
       "status": "AVAILABLE",
+      "topPlacement": 9,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -41,6 +43,7 @@
       "discountPrice": 19.49,
       "pageCount": 341,
       "status": "AVAILABLE",
+      "topPlacement": 10,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -56,6 +59,7 @@
       "discountPrice": 20.49,
       "pageCount": 435,
       "status": "AVAILABLE",
+      "topPlacement": 11,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -71,6 +75,7 @@
       "discountPrice": 16.99,
       "pageCount": 310,
       "status": "AVAILABLE",
+      "topPlacement": 12,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -86,6 +91,7 @@
       "discountPrice": 22.99,
       "pageCount": 423,
       "status": "AVAILABLE",
+      "topPlacement": 13,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -101,6 +107,7 @@
       "discountPrice": 23.49,
       "pageCount": 352,
       "status": "AVAILABLE",
+      "topPlacement": 14,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -116,6 +123,7 @@
       "discountPrice": 24.99,
       "pageCount": 416,
       "status": "AVAILABLE",
+      "topPlacement": 15,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -131,6 +139,7 @@
       "discountPrice": 16.99,
       "pageCount": 447,
       "status": "AVAILABLE",
+      "topPlacement": 16,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -146,6 +155,7 @@
       "discountPrice": 21.49,
       "pageCount": 1138,
       "status": "AVAILABLE",
+      "topPlacement": 17,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -161,6 +171,7 @@
       "discountPrice": 12.49,
       "pageCount": 199,
       "status": "AVAILABLE",
+      "topPlacement": 1,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -176,6 +187,7 @@
       "discountPrice": 15.49,
       "pageCount": 320,
       "status": "AVAILABLE",
+      "topPlacement": 2,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -191,6 +203,7 @@
       "discountPrice": 14.99,
       "pageCount": 256,
       "status": "AVAILABLE",
+      "topPlacement": 3,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -206,6 +219,7 @@
       "discountPrice": 15.49,
       "pageCount": 288,
       "status": "AVAILABLE",
+      "topPlacement": 4,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -221,6 +235,7 @@
       "discountPrice": 16.49,
       "pageCount": 272,
       "status": "AVAILABLE",
+      "topPlacement": 5,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -236,6 +251,7 @@
       "discountPrice": 19.99,
       "pageCount": 656,
       "status": "AVAILABLE",
+      "topPlacement": 6,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -251,6 +267,7 @@
       "discountPrice": 24.49,
       "pageCount": 784,
       "status": "AVAILABLE",
+      "topPlacement": 7,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -266,6 +283,7 @@
       "discountPrice": 20.99,
       "pageCount": 512,
       "status": "AVAILABLE",
+      "topPlacement": 8,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -281,6 +299,7 @@
       "discountPrice": 12.49,
       "pageCount": 112,
       "status": "AVAILABLE",
+      "topPlacement": 19,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     },
@@ -296,6 +315,7 @@
       "discountPrice": 17.49,
       "pageCount": 255,
       "status": "AVAILABLE",
+      "topPlacement": 20,
       "createdAt": "2025-08-20T08:00:00Z",
       "updatedAt": "2025-08-20T08:00:00Z"
     }
