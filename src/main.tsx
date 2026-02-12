@@ -9,6 +9,7 @@ import SignUpPage from "./pages/SignUpPage";
 import SignInPage from "./pages/SignInPage";
 import {checkToken} from "./services/localStorageHelper.ts";
 import NotFoundPage from "./pages/NotFoundPage";
+import ScrollToTop from "./components/ScrollToTop";
 // import authors from "./fixtures/authors.json"
 // import books from "./fixtures/books.json"
 // import categories from "./fixtures/categories.json"
@@ -20,6 +21,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 createRoot(document.getElementById("root")!).render(
     <BrowserRouter>
+        <ScrollToTop />
         <Routes>
             <Route path="/" element={<HomePage/>}/>
             <Route path="/sign_up" element={<SignUpPage/>}/>
