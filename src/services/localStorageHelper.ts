@@ -44,12 +44,18 @@ export function getBooks(): Book[] | null {
     return getFromLocalStorage<Book[]>("books")
 }
 
-export function getPopularBooks(): Book[] | null {
-    return getFromLocalStorage<Book[]>("popularBooks")
+function getPopularBooks(): Book[] | null {
+    const popularIds = getFromLocalStorage<number[]>("popularBooks");
+    const books = getBooks();
+
+    if (books && popularIds) {
+        return books.filter(book => popularIds.includes(book.id));
+    }
+    return null;
 }
 
 export function getBookById(bookId: number): Book | null {
-    const books = getPopularBooks();
+    const books = getBooks();
     if (books) {
         const book = books.find((b) => b.id === bookId);
         return book ? book : null;
