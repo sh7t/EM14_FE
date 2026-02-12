@@ -25,6 +25,7 @@ const BooksPage = () => {
                     {booksWithAuthorName.map((bookWithAuthorName: BookWithAuthorName)=> (
                         <BookPreview
                             key={bookWithAuthorName.id}
+                            id={bookWithAuthorName.id}
                             title={bookWithAuthorName.title}
                             variant={"buyable"}
                             authorName={bookWithAuthorName.authorName || "Author Name"}
