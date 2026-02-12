@@ -1,0 +1,73 @@
+.book-info-card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.book-info-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 240px;
+    font-family: "Inter", sans-serif;
+}
+
+.book-info-text h2 {
+    font-weight: 800;
+    font-size: 48px;
+}
+
+.book-info-text h3 {
+    font-weight: 500;
+    font-size: 36px;
+}
+
+.book-info-text span {
+    color: #DB5408;
+    font-weight: 500;
+}
+
+.book-info-text p {
+    margin: 20px 0;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.book-info-description {
+    font-family: "Inter", sans-serif;
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+
+.book-info-description h4 {
+    font-weight: 600;
+    font-size: 24px;
+}
+.book-info-description p {
+    margin-left: 100px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.new-released {
+    font-family: "Inter", sans-serif;
+}
+
+.new-released-books-preview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    margin: 45px 0;
+}
+
+.new-released h2 {
+    font-weight: 800;
+    font-size: 24px;
+}
