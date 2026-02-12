@@ -50,8 +50,22 @@ function getPopularBooks(top: number = 8): Book[] | null {
     if (books) {
         return books
             .filter(book => book.topPlacement <= top)
+            .slice()
             .sort((a, b) => a.topPlacement - b.topPlacement);
     }
+    return null;
+}
+
+export function getNewestBooks(count: number = 5): Book[] | null {
+    const books = getBooks();
+    if (books) {
+        return [...books]
+            .sort((a, b) =>
+                new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+            )
+            .slice(0, count);
+    }
+
     return null;
 }
 
