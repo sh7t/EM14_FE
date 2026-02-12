@@ -79,6 +79,22 @@ export function getBooksWithAuthor(isPopular: boolean = false, top?: number): Bo
     }
     return null;
 }
+export function getBookWithAuthorById(bookId: number): BookWithAuthorName | null {
+    const books = getBooks();
+    const authors = getAuthors();
+
+    if (books && authors) {
+        const book = books.find((b) => b.id === bookId);
+        if (book) {
+            const author = authors.find(a => a.id === book.authorId);
+            return {
+                ...book,
+                authorName: author ? author.name : null
+            };
+        }
+    }
+    return null;
+}
 
 export function saveUser(user: User) {
     const users = getFromLocalStorage<User[]>("users") || [];
