@@ -44,12 +44,13 @@ export function getBooks(): Book[] | null {
     return getFromLocalStorage<Book[]>("books")
 }
 
-function getPopularBooks(): Book[] | null {
-    const popularIds = getFromLocalStorage<number[]>("popularBooks");
+function getPopularBooks(top: number = 8): Book[] | null {
     const books = getBooks();
 
-    if (books && popularIds) {
-        return books.filter(book => popularIds.includes(book.id));
+    if (books) {
+        return books
+            .filter(book => book.topPlacement <= top)
+            .sort((a, b) => a.topPlacement - b.topPlacement);
     }
     return null;
 }
