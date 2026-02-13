@@ -1,7 +1,7 @@
 .home-search {
     background: linear-gradient(to right, #FFC581 68.5%, transparent 68.5%);
     padding: 0 60px;
-    height: 800px;
+    min-height: 800px;
 }
 
 .home-search-wrapper {
@@ -9,6 +9,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .home-title {
@@ -88,6 +89,8 @@
     margin: 0 auto;
     gap: 95px;
     max-width: 1165px;
+    width: 100%;
+    justify-content: center;
 }
 
 .popular-books-title {
