@@ -13,6 +13,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import authors from "./fixtures/authors.json"
 import books from "./fixtures/books.json"
 import categories from "./fixtures/categories.json"
+import CartPage from "./pages/CartPage";
 
 localStorage.setItem("authors", JSON.stringify(authors));
 localStorage.setItem("books", JSON.stringify(books));
@@ -29,6 +30,7 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/sign_up" element={!checkToken() ? <SignUpPage/> : <Navigate to="/"/>}/>
             <Route path="/sign_in" element={!checkToken() ? <SignInPage/> : <Navigate to="/"/> }/>
 
+            <Route path="/cart" element={checkToken() ? <CartPage /> : <Navigate to="/sign_in"/>}/>
             <Route path="/books" element={checkToken() ? <BooksPage/> : <Navigate to="/sign_in"/>}/>
             <Route path="/book/:bookId" element={checkToken() ? <BookPage/> : <Navigate to="/sign_in" />}/>
             <Route path="*" element={<NotFoundPage />} />
