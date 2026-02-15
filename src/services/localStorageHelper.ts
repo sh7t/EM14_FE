@@ -35,6 +35,14 @@ export function removeFromLocalStorage(key: string): void {
 export function getCategories(): Category[] | null {
     return getFromLocalStorage<Category[]>("categories")
 }
+export function getCategoryById(id: number): Category | null {
+    const categories = getCategories();
+    if (categories) {
+        const category = categories.find((category) => category.id === id);
+        return category ? category : null;
+    }
+    return null;
+}
 
 export function getAuthors(): Author[] | null {
     return getFromLocalStorage<Author[]>("authors")
