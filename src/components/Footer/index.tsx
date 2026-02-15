@@ -32,7 +32,7 @@ const Footer = () => {
                         </a>
                         <div className="routes">
                             <a className="route" href="/">Home</a>
-                            <a className="route" href="/about">About us</a>
+                            <a className="route" href="/about_us">About us</a>
                             <a className="route" href="/books">Books</a>
                             <a className="route" href="https://tinyurl.com/thinking-gif" target="_blank">Help Center</a>
                             <a className="route" href="https://tinyurl.com/thinking-gif" target="_blank">Contact us</a>
