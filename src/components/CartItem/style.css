@@ -1,0 +1,36 @@
+.cart-item {
+    border-top: 1px solid #989898;
+    border-bottom: 1px solid #989898;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item-quick-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-quick-buttons button {
+    color: #000000;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 6px 0;
+    transition: all 0.2s ease;
+}
+.item-quick-buttons button:hover {
+    cursor: pointer;
+    box-shadow: 0 6px 10px #26262626;
+    transform: translateY(-2px);
+}
+
+.item-quick-buttons hr {
+    border: 1px solid #989898;
+    margin: 0 20px;
+}
+
+.item-image img {
+    border: 2px solid #d1d1d1;
+}
