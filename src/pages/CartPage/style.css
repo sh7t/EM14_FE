@@ -1,0 +1,121 @@
+.cart-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 1400px;
+    font-family: "Inter", sans-serif;
+    gap: 50px;
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+.cart-container h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 40px 0;
+}
+
+.cart-container hr {
+    border: 3px solid #d7d7d7;
+}
+
+.cart-sidebar {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #ededed;
+    padding: 50px;
+    line-height: 2;
+}
+
+.cart-sidebar hr {
+    border: 1px solid black;
+    color: transparent;
+    margin: 15px 0;
+}
+
+.cart-sidebar h3 {
+    font-size: 20px;
+}
+
+.cart-sidebar .cart-span-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cart-sidebar span {
+    color: #808080;
+}
+
+.promo-form {
+    display: flex;
+    align-items: center;
+    width: 17em;
+    border: 2px solid black;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 10px 0 20px 0;
+}
+
+.promo-input {
+    font-family: "Manrope", sans-serif;
+    font-size: 1em;
+    color: black;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 3em;
+    padding: 0 1em 0 8px;
+}
+
+.promo-input::placeholder {
+    color: #00000080;
+}
+
+.promo-button:active {
+    background-color: #c74400;
+    box-shadow: 0 2px 4px #1a1a1a1a;
+    transform: translateY(0);
+}
+
+.promo-button {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    color: #000000;
+    background-color: #DB5408;
+    padding: 1em;
+    border: none;
+    border-left: 2px solid black;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.promo-button:hover {
+    background-color: #e25f1b;
+    box-shadow: 0 4px 8px #26262626;
+}
+
+.cart-sidebar button {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    background-color: #DB5408;
+    padding: 12px 0;
+    border: none;
+    cursor: pointer;
+    margin: 6px 0;
+    box-shadow: 0 4px 6px #1a1a1a1a;
+    transition: all 0.2s ease;
+}
+
+.cart-sidebar button:hover {
+    background-color: #e25f1b;
+    box-shadow: 0 6px 10px #26262626;
+    transform: translateY(-2px);
+}
+
