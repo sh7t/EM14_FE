@@ -22,6 +22,11 @@ const CartPage = () => {
           <div className="cart-container">
             <h2>My cart</h2>
             <hr />
+            <div className="cart-headers">
+              <div className="cart-header-product">Product</div>
+              <div className="cart-header-price">Price</div>
+              <div className="cart-header-total">Total</div>
+            </div>
             {userCart.map((cartItem: CartItemType) => {
               return (
                 <CartItem

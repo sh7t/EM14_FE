@@ -23,6 +23,21 @@
   border: 3px solid #d7d7d7;
 }
 
+.cart-headers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #DB5408;
+}
+
+.cart-headers .cart-header-price {
+  margin-left: 440px;
+}
+
 .cart-sidebar {
   display: flex;
   flex-direction: column;
