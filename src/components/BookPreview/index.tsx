@@ -1,44 +1,44 @@
-import "./style.css"
-import {useNavigate} from "react-router"
+import "./style.css";
+import { useNavigate } from "react-router";
 import AddToCart from "../AddToCart";
 
 type BookPreviewProps = {
-    id: number,
-    title: string;
-    authorName: string;
-    coverUrl: string;
-    variant: "buyable" | "unbuyable";
-    price?: number;
-}
+  id: number;
+  title: string;
+  authorName: string;
+  coverUrl: string;
+  variant: "buyable" | "unbuyable";
+  price?: number;
+};
 
 const BookPreview = (props: BookPreviewProps) => {
-    const navigate = useNavigate();
-
-    return (
-        <div className={`book-preview book-preview--${props.variant}`}>
-            <div
-                className="book-preview-clickable"
-                onClick={() => navigate("/book/" + props.id)}>
-                <div className="book-preview-cover">
-                    <img src={props.coverUrl} alt="Cover"/>
-                </div>
-
-                <p className="book-preview-title">{props.title}</p>
-
-                <p className="book-preview-author">{props.authorName}</p>
-
-                {props.variant === "buyable" && (
-                    <div className="book-preview-footer">
-                        <AddToCart />
-                    </div>
-                )}
-
-                {props.variant === "unbuyable" && props.price && (
-                    <p className="book-preview-price">${props.price}</p>
-                )}
-            </div>
+  const navigate = useNavigate();
+  return (
+    <div className={`book-preview book-preview--${props.variant}`}>
+      <div
+        className="book-preview-clickable"
+        onClick={() => navigate("/book/" + props.id)}
+      >
+        <div className="book-preview-cover">
+          <img src={props.coverUrl} alt="Cover" />
         </div>
-    )
-}
+
+        <p className="book-preview-title">{props.title}</p>
+
+        <p className="book-preview-author">{props.authorName}</p>
+
+        {props.variant === "buyable" && (
+          <div className="book-preview-footer">
+            <AddToCart key={props.id} bookId={props.id} />
+          </div>
+        )}
+
+        {props.variant === "unbuyable" && props.price && (
+          <p className="book-preview-price">${props.price}</p>
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default BookPreview;

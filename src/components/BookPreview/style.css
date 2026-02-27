@@ -1,67 +1,69 @@
 .book-preview {
-    width: 220px;
-    height: 450px;
+  width: 220px;
+  height: 450px;
 }
 
 .book-preview-clickable {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .book-preview:hover .book-preview-clickable {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 20px #00000026;
-    cursor: pointer;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px #00000026;
+  cursor: pointer;
 }
 
 .book-preview-title,
 .book-preview-author,
 .book-preview-price {
-    font-family: "Inter", sans-serif;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 0;
+  font-family: "Inter", sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
 }
 
 .book-preview-title {
-    margin-top: 20px;
-    font-weight: 400;
+  margin-top: 20px;
+  font-weight: 400;
 }
 
 .book-preview-author {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 .book-preview-price {
-    color: #DB5408;
-    font-weight: 300;
+  color: #db5408;
+  font-weight: 300;
 }
 
 .book-preview-footer {
-    display: flex;
-    justify-content: center;
-    margin-top: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
 }
 
 .book-preview--buyable .book-preview-title,
 .book-preview--buyable .book-preview-author {
-    text-align: center;
+  text-align: center;
 }
 
 .book-preview--buyable .book-preview-title {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .book-preview--buyable .book-preview-author {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .book-preview--unbuyable .book-preview-title,
 .book-preview--unbuyable .book-preview-author,
 .book-preview--unbuyable .book-preview-price {
-    text-align: left;
-    font-size: 20px;
+  text-align: left;
+  font-size: 20px;
 }

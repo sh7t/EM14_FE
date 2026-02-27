@@ -1,90 +1,88 @@
 .header {
-    border-bottom: 1px solid #e5e7eb;
-    background: #FFFFFF;
-    display: flex;
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+  display: flex;
 }
 
 .header .header-wrapper {
-    max-width: 1400px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 25px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 25px;
 }
 
 .header .header-wrapper .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
 }
 
-.header .header-wrapper .header-container .logo .logo-link  {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.header .header-wrapper .header-container .logo .logo-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header .header-wrapper .header-container .logo .logo-link #logo-text {
-    font-family: "Lexend", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
+  font-family: "Lexend", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .header .header-wrapper .header-container .routes {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
 }
 
 .header .header-wrapper .header-container .routes .route {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 25px;
-    color: #000000B2;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  color: #000000b2;
 }
 
 .header .header-wrapper .header-container .auth {
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 12px;
 }
 
 .header .header-wrapper .header-container .auth .auth-button {
-    font-family: "Inter", sans-serif;
-    font-weight: 800;
-    font-size: 25px;
-    color: #FFFFFF;
-    background-color: #DB5408;
-    border: none;
-    border-radius: 9px;
-    padding: 13px 0;
-    cursor: pointer;
-    box-shadow: 0 4px 6px #1a1a1a1a;
-    transition: all 0.2s ease;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 25px;
+  color: #ffffff;
+  background-color: #db5408;
+  border: none;
+  border-radius: 9px;
+  padding: 13px 0;
+  cursor: pointer;
+  box-shadow: 0 4px 6px #1a1a1a1a;
+  transition: all 0.2s ease;
 }
 
 .header .header-wrapper .header-container .auth #log-in {
-    padding-left: 26px;
-    padding-right: 26px;
+  padding-left: 26px;
+  padding-right: 26px;
 }
 
 .header .header-wrapper .header-container .auth #log-in:hover,
 .header .header-wrapper .header-container .auth #sign-in:hover {
-    background-color: #e25f1b;
-    box-shadow: 0 6px 10px #26262626;
-    transform: translateY(-2px);
+  background-color: #e25f1b;
+  box-shadow: 0 6px 10px #26262626;
+  transform: translateY(-2px);
 }
 
 .header .header-wrapper .header-container .auth #sign-in {
-    padding-left: 50px;
-    padding-right: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
-
 
 .header .header-wrapper .header-container .routes a,
 .header .header-wrapper .header-container .routes a:hover,
 .header .header-wrapper .header-container .routes a:visited {
-    text-decoration: none;
+  text-decoration: none;
 }
-

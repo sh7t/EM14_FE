@@ -1,3 +1,3 @@
-import type {Book} from "./book.ts";
+import type { Book } from "./book.ts";
 
 export type BookWithAuthorName = Book & { authorName: string | null };
