@@ -26,17 +26,16 @@ const BookPreview = (props: BookPreviewProps) => {
         <p className="book-preview-title">{props.title}</p>
 
         <p className="book-preview-author">{props.authorName}</p>
-
-        {props.variant === "buyable" && (
+      </div>
+      {props.variant === "buyable" && (
           <div className="book-preview-footer">
             <AddToCart key={props.id} bookId={props.id} />
           </div>
-        )}
+      )}
 
-        {props.variant === "unbuyable" && props.price && (
+      {props.variant === "unbuyable" && props.price && (
           <p className="book-preview-price">${props.price}</p>
-        )}
-      </div>
+      )}
     </div>
   );
 };
