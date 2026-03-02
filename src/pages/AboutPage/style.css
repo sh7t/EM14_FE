@@ -1,0 +1,43 @@
+.about-title {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: "Manrope", sans-serif;
+    color: #DB5408;
+    font-size: 54px;
+    font-weight: bold;
+    background: #ffc581;
+    padding: 50px;
+}
+
+.about-title img {
+    border-radius: 25px;
+}
+
+.about-content {
+    padding: 50px;
+    font-family: "Manrope", sans-serif;
+    color: black;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.about-content span {
+    color: #DB5408;
+}
+
+.about-content h2, .about-content h3 {
+    text-align: center;
+}
+
+.about-content p,
+.about-content h4,
+.about-content h5,
+.about-content h6 {
+    color: black;
+    font-size: 24px;
+    font-weight: 400;
+}
