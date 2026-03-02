@@ -1,4 +1,3 @@
-import "./style.css";
 import Layout from "../layout/Layout";
 import {useAppDispatch, useAppSelector} from "../../hooks/redux.ts";
 import {useEffect} from "react";
