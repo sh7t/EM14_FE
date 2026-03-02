@@ -36,8 +36,7 @@ const Header = () => {
             </a>
             <a
               className="route"
-              href="https://tinyurl.com/thinking-gif"
-              target="_blank"
+              href="/api-test"
             >
               Contact us
             </a>
